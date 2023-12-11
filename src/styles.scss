@@ -1,0 +1,65 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+  height:100%;width:100%;
+  font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+a{color:inherit;}
+
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url("./assets/fonts/Gilroy-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url("./assets/fonts/Gilroy-Extrabold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: Tavolga;
+  src: url("./assets/fonts/Ivan Petrov - Tavolga Free.ttf");
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.btn {
+  //background-image: linear-gradient(360deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  padding: 19px 20px 19px 20px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: Gilroy-Bold, sans-serif;
+  color: rgb(255, 255, 255);
+  transition: .5s;
+}
+
+.btn:hover {
+  //box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
+}

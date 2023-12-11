@@ -1,0 +1,28 @@
+<div class="choice__item" >
+  <div class="choice__item__image">
+    <img class="choice__item__image-img" src="assets/images/{{product.image}}" alt="Macaroon {{index + 1}}">
+  </div>
+  <div class="choice__item__title">
+    <h2>{{product.title}}</h2>
+  </div>
+
+  <div class="choice__item__cart">
+    <div class="choice__item__cart__text">
+      <div class="choice__item__cart__count">
+        {{product.count}}
+      </div>
+      <div class="choice__item__cart__price">
+        {{product.price |  currency:'руб '}}
+      </div>
+    </div>
+    <div class="choice__item__cart__action">
+      <button appButton
+              [backgroundDefault] ="'linear-gradient(360deg, rgb(113 8 30) 0%, rgb(215, 72, 92) 100%)'"
+              [backgroundHover] ="'0 5px 9px 1px rgba(130, 19, 40, 0.5)'"
+              class="btn choice-btn" (click)="addProductToCart()">
+        Заказать
+      </button>
+    </div>
+  </div>
+
+</div>

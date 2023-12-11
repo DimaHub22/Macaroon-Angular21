@@ -1,0 +1,13 @@
+<div class="features__items">
+  <div class="features__item" *ngFor="let feature of features, let i = index">
+    <div class="features__item__number">
+      <span class="features__item__number-span">{{i + 1}}</span>
+    </div>
+    <div class="features__item__title">
+      {{feature.title}}
+    </div>
+    <div class="features__item__description">
+      {{feature.description | text}}
+    </div>
+  </div>
+</div>

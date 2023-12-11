@@ -1,0 +1,227 @@
+<div class="layout">
+
+  <div class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <svg class="logo__svg"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="114px" height="13px">
+          <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="18px" x="0px" y="13px">
+            <tspan font-size="18px" font-family="Tavolga" fill="#FFFFFF">macaroons</tspan>
+          </text>
+        </svg>
+      </div>
+      <div class="header__burger" id="burger" (click)="open()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="40px" height="22px">
+          <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                d="M0.000,-0.000 L40.000,-0.000 L40.000,2.000 L0.000,2.000 L0.000,-0.000 Z"/>
+          <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                d="M0.000,10.000 L40.000,10.000 L40.000,12.000 L0.000,12.000 L0.000,10.000 Z"/>
+          <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                d="M0.000,20.000 L40.000,20.000 L40.000,22.000 L0.000,22.000 L0.000,20.000 Z"/>
+        </svg>
+      </div>
+      <nav class="menu" [class.open]="isOpenMenu">
+        <div class="menu__close" (click)="close()">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+                                    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+                                    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+                                    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+                                    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+                                    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+                                    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+                            </g>
+                        </g>
+                        </svg>
+        </div>
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a (click)="scrollTo(choice)" class="menu__item-link">Пироженки</a>
+          </li>
+          <li class="menu__item">
+            <a (click)="scrollTo(about)" class="menu__item-link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a (click)="scrollTo(order)" class="menu__item-link">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="phone header__phone">
+        <a href="tel:+375(29)368-98-68">{{phone | phone}}</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="main">
+    <div class="container main__container">
+      <div class="main__description">
+        <h1 class="main__title">Мягкие французские
+          пироженки Macaroons
+        </h1>
+        <div class="main__subtitle">
+          Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
+        </div>
+        <div class="action main__action">
+          <button appButton
+                  [backgroundDefault]="'linear-gradient(360deg, rgb(113 8 30) 0%, rgb(215, 72, 92) 100%)'"
+                  [backgroundHover]="'0 5px 9px 1px rgba(130, 19, 40, 0.5)'"
+                  class="btn main__btn" (click)="scrollTo(choice)">Выбрать макарун
+          </button>
+        </div>
+      </div>
+      <div class="main__image">
+        <img class="main__image-img" src="assets/images/main-img.png" alt="Macaroons">
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="description" #about>
+  <div class="container description__container">
+    <div class="description__items">
+      <div class="description__item__text">
+        <h2 class="description__item__text-title">Мы печём для вас
+          вкуснейшие макаруны
+          уже более 10 лет
+        </h2>
+        <div class="description__item__text-subtitle">
+          Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
+          ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей,
+          маргарина, разрыхлителей и улучшителей муки.
+        </div>
+      </div>
+      <div class="description__item__image">
+        <img class="description__item__image-img" src="assets/images/6.png" alt="Macaroon">
+      </div>
+    </div>
+    <app-feature></app-feature>
+  </div>
+</section>
+
+
+<section class="choice" #choice>
+  <div class="container">
+    <h2 class="choice__title">
+      Выберите свой макарун
+    </h2>
+    <div class="choice__items">
+
+      <app-product *ngFor="let macaroon of macaroons; let i = index"
+                   [product]=macaroon [index]="i"
+                   (addToCartEvent)="addToCart($event, order)"
+      ></app-product>
+
+    </div>
+  </div>
+</section>
+
+<section class="order" #order>
+  <div class="container">
+
+    <div class="order__items">
+
+      <div class="order__item__image">
+        <img class="order__item__image-img" src="assets/images/macaron_PNG56.png" alt="">
+        <img class="order__item__image-bg" src="assets/images/клубника.png" alt="">
+      </div>
+
+      <div class="order__item">
+        <h2 class="order__item__title">
+          Закажите макарун!
+        </h2>
+        <div class="order__item__description">
+          Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
+        </div>
+
+        <div class="order__item__form">
+          <h2 class="order__item__form__title">
+            Ваш выбор
+          </h2>
+          <input type="text" class="order__item__form__input" placeholder="Напишите, что хотите заказать..."
+                 [(ngModel)]="formValues.choice">
+          <h2 class="order__item__form__title">
+            Заполните данные для заказа
+          </h2>
+          <input type="text" class="order__item__form__input" placeholder="Ваше имя" [(ngModel)]="formValues.name">
+          <input type="tel" class="order__item__form__input" placeholder="+375 (__) ___ - __ - __"
+                 [(ngModel)]="formValues.phone">
+          <button appButton
+                  [backgroundDefault]="'linear-gradient(360deg, rgb(113 8 30) 0%, rgb(215, 72, 92) 100%)'"
+                  [backgroundHover]="'0 5px 9px 1px rgba(130, 19, 40, 0.5)'"
+                  class="btn order__item__form__btn" (click)="sendOrder()">
+            Оформить заказ
+          </button>
+          <img class="order__item__form__img" src="assets/images/клубника%20копия%202.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__logo">
+      <div class="logo">
+        <svg class="logo__svg"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="114px" height="13px">
+          <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="18px" x="0px" y="13px">
+            <tspan font-size="18px" font-family="Tavolga" fill="#FFFFFF">macaroons</tspan>
+          </text>
+        </svg>
+      </div>
+      <div class="right">
+        Все права защищены, 2020
+      </div>
+    </div>
+    <div class="right__mobil">
+      Все права защищены, 2020
+    </div>
+    <div class="social">
+      <div class="social__icon">
+        <a [href]="social" target="_blank">
+          <img src="assets/images/instagram.png" alt="Instagram">
+        </a>
+      </div>
+      <div class="social__text">
+        Мы в Instagram
+      </div>
+    </div>
+    <div class="phone footer__phone">
+      <a href="tel:+375(29)368-98-68">{{phone | phone}}</a>
+    </div>
+  </div>
+
+
+  <div class="box__present" *ngIf="showPresent">
+    <div class="present">
+      <a href="#order" class="present__link">
+        <img class="present__img" src="assets/images/cart.png" alt="Cart">
+      </a>
+      <div class="cart__count" *ngIf="cart.count > 0">{{cart.count}}</div>
+    </div>
+
+    <div class="box__present__block">
+      <div [ngStyle]="{'width':'120px', 'height': 'auto', 'text-align': 'center'}" class="box__present__block-big"
+           *ngIf="cart.count > 0">
+        {{cart.setPrice() | currency: 'руб '}}
+      </div>
+      <div class="box__present__block-big" *ngIf="cart.count < 1">
+        Оформите заказ и получите подарок!
+      </div>
+      <div [ngStyle]="{'left':'110px'}" class="box__present__block-small" *ngIf="cart.count > 0"></div>
+      <div class="box__present__block-small" *ngIf="cart.count < 1"></div>
+    </div>
+  </div>
+</footer>
